@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>NaniCommunity | Oficial</title>
+    <style>
+        body { 
+            /* Imagen de fondo */
+            background-image: url('logo.png'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #0f0f0f; /* Color de respaldo */
+            
+            color: #e0e0e0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Capa oscura para que el texto se lea bien sobre el logo */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Ajusta el 0.6 para más o menos brillo */
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1;
+        }
+
+        h1 { 
+            font-size: 3.5rem;
+            color: #00d4ff; 
+            text-shadow: 0px 0px 20px rgba(0, 212, 255, 0.8);
+            margin-bottom: 10px;
+        }
+
+        p { font-size: 1.2rem; margin-bottom: 30px; }
+
+        button { 
+            background-color: #00d4ff; 
+            border: none; 
+            color: black; 
+            padding: 15px 40px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            transition: 0.3s;
+            box-shadow: 0px 0px 15px #00d4ff;
+        }
+
+        button:hover { 
+            transform: scale(1.1); 
+            background-color: #ffffff;
+            box-shadow: 0px 0px 25px #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>NaniCommunity</h1>
+        <p>¡Bienvenida a la comunidad, Gamer!</p>
+        <button onclick="abrirServidor()">ÚNETE AL SERVIDOR</button>
+    </div>
+
+    <script>
+        function abrirServidor() {
+            const urlServidor = "https://discord.gg/Pvc6A8KSGG"; 
+            window.open(urlServidor, '_blank');
+        }
+    </script>
+</body>
+</html>
